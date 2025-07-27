@@ -1,6 +1,6 @@
 import './App.css'
 import Navbar from './Components/Navbar.jsx'
-import Layout from './components/Layout'
+import Layout from './components/Layout.jsx'
 import Hero from './components/Hero.jsx'
 import Gallery from './components/Gallery.jsx'
 import HomePageBento from "./Components/HomePageBento.jsx";
