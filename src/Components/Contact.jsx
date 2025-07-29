@@ -15,48 +15,17 @@ const Contact = () => {
 
                 {/* Contact Form */}
                 <div className="bg-gray-50 rounded-[32px] shadow p-8 w-full">
-                    <form
-                        name="contact"
-                        method="POST"
-                        data-netlify="true"
-                        netlify-honeypot="bot-field"
-                        className="flex flex-col gap-4"
-                        action="/"
-                    >
-
-                        <input type="hidden" name="form-name" value="contact"/>
-                        <p className="hidden">
-                            <label>Don’t fill this out if you’re human: <input name="bot-field"/></label>
-                        </p>
-
-
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="Your name"
-                            required
-                            className="p-3 rounded-lg border border-gray-200"
-                        />
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Your email"
-                            required
-                            className="p-3 rounded-lg border border-gray-200"
-                        />
-                        <textarea
-                            name="message"
-                            placeholder="Your message"
-                            required
-                            className="p-3 rounded-lg border border-gray-200 h-40 resize-none"
-                        />
-                        <button
-                            type="submit"
-                            className="bg-emerald-500 text-white py-3 px-6 rounded-lg hover:bg-emerald-600 transition font-semibold"
-                        >
-                            Send Message
-                        </button>
-                    </form>
+                    <form name="contact" netlify>
+                    <p>
+                        <label>Name <input type="text" name="name" /></label>
+                    </p>
+                    <p>
+                        <label>Email <input type="email" name="email" /></label>
+                    </p>
+                    <p>
+                        <button type="submit">Send</button>
+                    </p>
+                </form>
                 </div>
             </div>
         </section>
