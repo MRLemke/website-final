@@ -19,41 +19,43 @@ const Contact = () => {
                         name="contact"
                         method="POST"
                         data-netlify="true"
-                        netlify-honeypot="bot-field"
                         className="flex flex-col gap-4"
                     >
+                        {/* Required for Netlify to recognize the form */}
                         <input type="hidden" name="form-name" value="contact"/>
-                        <p className="hidden">
-                            <label>Don’t fill this out if you’re human: <input name="bot-field"/></label>
+
+                        <p>
+                            <label>
+                                Name
+                                <input
+                                    type="text"
+                                    name="name"
+                                    required
+                                    className="mt-1 p-2 border border-gray-300 rounded w-full"
+                                />
+                            </label>
                         </p>
 
+                        <p>
+                            <label>
+                                Email
+                                <input
+                                    type="email"
+                                    name="email"
+                                    required
+                                    className="mt-1 p-2 border border-gray-300 rounded w-full"
+                                />
+                            </label>
+                        </p>
 
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="Your name"
-                            required
-                            className="p-3 rounded-lg border border-gray-200"
-                        />
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Your email"
-                            required
-                            className="p-3 rounded-lg border border-gray-200"
-                        />
-                        <textarea
-                            name="message"
-                            placeholder="Your message"
-                            required
-                            className="p-3 rounded-lg border border-gray-200 h-40 resize-none"
-                        />
-                        <button
-                            type="submit"
-                            className="bg-emerald-500 text-white py-3 px-6 rounded-lg hover:bg-emerald-600 transition font-semibold"
-                        >
-                            Send Message
-                        </button>
+                        <p>
+                            <button
+                                type="submit"
+                                className="bg-emerald-500 text-white py-2 px-4 rounded hover:bg-emerald-600"
+                            >
+                                Send
+                            </button>
+                        </p>
                     </form>
                 </div>
             </div>
