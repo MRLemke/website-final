@@ -13,11 +13,17 @@ const Contact = () => {
                 {/* Contact Form */}
                 <div className="bg-gray-50 rounded-[32px] shadow p-8 w-full">
                     <form
-                        action="https://formsubmit.co/owenpdonohue@gmail.com"
+                        name="contact"
                         method="POST"
+                        data-netlify="true"
+                        netlify-honeypot="bot-field"
                         className="flex flex-col gap-4"
                     >
-                        <input type="hidden" name="_captcha" value="false"/>
+                        <input type="hidden" name="form-name" value="contact"/>
+                        <p className="hidden">
+                            <label>Don’t fill this out if you’re human: <input name="bot-field"/></label>
+                        </p>
+
 
                         <input
                             type="text"
