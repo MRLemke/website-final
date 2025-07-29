@@ -1,6 +1,40 @@
 import React from "react";
+import { useState } from "react";
 
 const Contact = () => {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: "",
+        "bot-field": "",
+    });
+
+    const [submitted, setSubmitted] = useState(false);
+
+    const handleChange = (e) => {
+        setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const form = e.target;
+        const data = new FormData(form);
+
+        try {
+            await fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(data).toString(),
+            });
+
+            setSubmitted(true);
+            setFormData({ name: "", email: "", message: "", "bot-field": "" });
+        } catch (error) {
+            console.error("Form submission error:", error);
+        }
+    };
+
     return (
         <section className="w-full min-h-screen py-24 px-6 flex items-center justify-center">
             <div className="max-w-xl w-full text-center">
