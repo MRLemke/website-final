@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink, Link } from "react-router-dom"
 import {  Mail, Github, Linkedin, Briefcase } from "lucide-react";
 import { FaPaperPlane } from "react-icons/fa";
 
@@ -144,12 +145,12 @@ const HomePageBento = () => {
                         </div>
 
                         <div className="mt-6">
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="inline-block bg-emerald-500 text-gray-50 font-medium text-sm px-5 py-2.5 rounded-lg hover:bg-emerald-600 transition"
                             >
                                 Contact Me
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

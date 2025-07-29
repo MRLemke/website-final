@@ -3,9 +3,9 @@ import React from "react";
 const Gallery = () => {
     const images = [
         "/picture1.jpg",
-        "/Mockup art by maryam.png",
+        "/Mockup art by maryam.jpg",
         "/gallery3.png",
-        "/Celestial Laptop Mockup.png",
+        "/Celestial Laptop Mockup.jpg",
         "/FigmaGallery.jpg",
     ];
     const rotations = [
